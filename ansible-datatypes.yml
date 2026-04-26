@@ -12,7 +12,7 @@
     - name: install my COURSE
       ansible.builtin.debug:
         msg: "{{ COURSE }} and my time is {{ DURATION }}, then content is {{ LIST }}"
-      when: DURATION > 100  # Aligned with 'ansible.builtin.debug'
+      when: DURATION < 100  # Aligned with 'ansible.builtin.debug'
 
     - name: install my new COURSE
       ansible.builtin.debug:
