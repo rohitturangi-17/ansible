@@ -6,7 +6,7 @@
     - name: create a index file
       ansible.builtin.copy:
         content: "<h1>Welcome to Rohit's Server</h1>"
-        dest: /c/Rohit/DEVOPS/repos/ansible
+        dest: /root/ansible/index.html
         owner: root
         mode: '0644' # 777 is a security risk; 644 is standard for web files
       when: ansible_os_family == "RedHat"
