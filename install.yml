@@ -12,4 +12,4 @@
       ansible.builtin.package:
         name: "{{ PACKAGE_LIST }}"
         state: present
-      when: ansible_os_family == "RedHat"  # Moved inside the task
+      when: ansible_os_family == "RedHat" 

@@ -1,0 +1,8 @@
+---
+- name: to know the cpu usage
+  hosts: local
+  become: true
+  tasks:
+   - name: fetch the cpu usage
+     anible.builtin.debug:
+     msg: "{{nsible_processor_cores}},{{ansible_memtotal_mb}}"
