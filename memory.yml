@@ -1,8 +1,0 @@
----
-- name: to know the cpu usage
-  hosts: local
-  become: true
-  tasks:
-    - name: fetch the cpu usage
-      ansible.builtin.debug:        # 1. Fixed typo (added 's')
-        msg: "{{ ansible_processor_cores }}, {{ ansible_memtotal_mb }}" # 2. Fixed indentation and variable name
