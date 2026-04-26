@@ -11,4 +11,4 @@
   tasks:
     - name: install my COURSE
       ansible.builtin.debug:
-        msg: "{{ COURSE }} and my time is {{ DURATION }} , then content is {{ LIST }}""
+        msg: "{{ COURSE }} and my time is {{ DURATION }} , then content is {{ LIST }}"
