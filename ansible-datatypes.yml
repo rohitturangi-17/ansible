@@ -5,16 +5,16 @@
     COURSE: "devops is a art"
     DURATION: 120
     LIST:
-    - AWS
-    - AZURE
-    - GCP
+      - AWS
+      - AZURE
+      - GCP
   tasks:
     - name: install my COURSE
       ansible.builtin.debug:
-        msg: "{{ COURSE }} and my time is {{ DURATION }} , then content is {{ LIST }}"
-        when: DURATION > 100
+        msg: "{{ COURSE }} and my time is {{ DURATION }}, then content is {{ LIST }}"
+      when: DURATION > 100  # Aligned with 'ansible.builtin.debug'
 
     - name: install my new COURSE
       ansible.builtin.debug:
-       msg: "my time is {{DURATION}}" 
-       when: DURATION == 120  
+        msg: "my time is {{ DURATION }}"
+      when: DURATION == 120 # Aligned with 'ansible.builtin.debug'
