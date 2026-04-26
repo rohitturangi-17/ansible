@@ -9,7 +9,6 @@
   tasks:
     - name: install the listed packages
       ansible.builtin.package:
-        name: "{{ ITEM }}"
+        name: "{{ PACKAGE_LIST }}"
         state: present
-      loop: "{{ PACKAGE_LIST }}"
-      when: ansible_os_family == "RedHat"
+      when: ansible_os_family == "RedHat"  # Moved inside the task
