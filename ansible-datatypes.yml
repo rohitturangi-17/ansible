@@ -1,0 +1,14 @@
+---
+- name: ansible data
+  hosts: localhost
+  vars:
+    COURSE: "devops is a art"
+    DURATION: 120
+    LIST:
+    - AWS
+    - AZURE
+    - GCP
+  tasks:
+    - name: install my COURSE
+      ansible.builtin.debug:
+        msg: "{{ COURSE }} and my time is {{ DURATION }} , then content is {{ LIST }}""
