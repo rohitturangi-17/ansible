@@ -2,26 +2,11 @@
 - name: website server begins
   hosts: local
   become: true
-  vars:
-    PACKAGE: nginx
   tasks:
-    - name: install nginx
-      ansible.builtin.package:
-        name: "{{ PACKAGE }}"
-        state: present
-      when: ansible_os_family == "RedHat"
-
-    - name: start and enable nginx
-      ansible.builtin.service:
-        name: "{{ PACKAGE }}"
-        state: started
-        enabled: true
-      when: ansible_os_family == "RedHat"
-
     - name: create a index file
       ansible.builtin.copy:
         content: "<h1>Welcome to Rohit's Server</h1>"
-        dest: /usr/share/nginx/html/index.html
+        dest: /c/Rohit/DEVOPS/repos/ansible
         owner: root
         mode: '0644' # 777 is a security risk; 644 is standard for web files
       when: ansible_os_family == "RedHat"
